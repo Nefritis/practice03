@@ -15,7 +15,18 @@ public class GoodsApp {
 			String name = scanner.next();
 			int price = scanner.nextInt();
 			int countStock = scanner.nextInt();
-
+			
+			Goods good = new Goods();
+			good.setName(name);
+			good.setPrice(price);
+			good.setCountStock(countStock);
+			goods[i] = good;
+		}
+		
+		String g[];
+		
+		for(Goods good : goods){
+			System.out.println("실행 결과 : " + good.getName() + "  "+ good.getPrice() + "  "+  good.getCountStock());
 		}
 
 		// 자원정리
